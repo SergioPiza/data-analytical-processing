@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"create_datadb": "nodemon connect.js",
+		"create_datadb": "nodemon date_desc_db.js",
 		"dev": "nodemon app.js"
 	},
 	"engines": {
