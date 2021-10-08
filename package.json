@@ -1,0 +1,33 @@
+{
+	"name": "ibovespa-data-processing",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"create_datadb": "nodemon connect.js",
+		"dev": "nodemon app.js"
+	},
+	"engines": {
+		"node": "12.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SergioPiza/data-analytical-processing.git"
+	},
+	"author": "Sergio Toledo Piza",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SergioPiza/data-analytical-processing/issues"
+	},
+	"homepage": "https://github.com/SergioPiza/data-analytical-processing#readme",
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"fast-csv": "^4.3.6",
+		"fs": "0.0.1-security",
+		"nodemon": "^2.0.13",
+		"path": "^0.12.7",
+		"pg": "^7.11.0",
+		"pg-format": "^1.0.4",
+		"pg-hstore": "^2.3.2"
+	}
+}
