@@ -1,3 +1,5 @@
+drop table if exists date_desc;
+
 create table date_desc (
 	id SERIAL primary key,
 	data DATE not null,
