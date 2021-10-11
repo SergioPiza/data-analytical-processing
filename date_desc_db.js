@@ -4,6 +4,7 @@ const fs = require("fs");
 const bd = require("./connect");
 const prompt = require("prompt");
 const moment = require("moment"); // require
+const { rawListeners } = require("process");
 moment().format();
 
 let minDate = new Date("01/01/2030");
@@ -158,6 +159,9 @@ let tableExists = false;
 			await bd
 				.query("SELECT * FROM date_desc ORDER BY id")
 				.then((res) => {
+					res.rows.forEach((row) => {
+						row.data = row.data.toISOString().split("T")[0];
+					});
 					const jsonData = JSON.parse(JSON.stringify(res.rows));
 					const ws = fs.createWriteStream("csv/date_desc.csv");
 					csv.write(jsonData, { headers: true })
