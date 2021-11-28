@@ -5,6 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"create_datadb": "nodemon date_desc_db.js",
+		"create_stockindexesdb": "nodemon stock_indexes_db.js",
+		"create_acoesdb": "nodemon acoes_db.js",
 		"dev": "nodemon app.js"
 	},
 	"engines": {
